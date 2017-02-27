@@ -1,0 +1,307 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+#wrapper{
+  width: 1050px;
+  background-color: rgba(51, 0, 51, .7);
+  margin: 0px, auto;
+
+}
+#topbar{
+  background-color: white;
+  width: 1050px;
+  align-items: center;
+  padding: 10
+}
+
+#topleft{
+  display: inline-block;
+}
+#topright{
+  display: inline-block;
+  float: right;
+  margin-right: 16px;
+}
+
+h1{
+  margin-left: 20px;
+
+}
+h2{
+  background-color: rgba(102,102,102,.95);
+  font-style: normal;
+  font-size: 16x;
+  color: white;
+  height: 30px;
+  align-items: center;
+  text-align:left;
+  padding: 5px;
+
+
+
+}
+
+
+
+
+
+}
+#maintop{
+
+}
+
+#about{
+  background-color:  rgba(226,226,226,.9);
+  height: 280px;
+  width: 450px;
+  float: right;
+  margin: 20px;
+  border-style: solid;
+  border-color: gray;
+
+}
+
+#abouttitle{
+  text-align: right;
+  text-align: left;
+
+#abouttitle{
+  background-color: rgba(102,102,102,.95);
+  font-style: normal;
+  font-size: 16px;
+
+}
+
+
+#photo{
+  display: inline-block;
+  margin: 10px;
+
+
+}
+
+
+#janephoto{
+
+  width: 450px;
+  display: inline-block;
+  margin: 20px;
+  border-style: solid;
+  border-color: gray;
+}
+
+}
+
+#abouttext{
+  display: inline-block;
+}
+#mainbottom{
+
+}
+
+.bottomcontent{
+  width: 280px;
+  height: 450px;
+  margin: 15px;
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: top;
+  border-style: solid;
+  border-color: gray;
+  background-color:rgba(226,226,226,.9);
+
+
+}
+
+.paragraph{
+  height: 100px;
+}
+
+.technology{
+  background-color: rgba(102,102,102,.95);
+  font-style: normal;
+  font-size: 14x;
+  color: white;
+  height: 20px;
+  align-items: center;
+  text-align:left;
+  padding-top: 5px;
+
+#lamode{
+width: 270px;
+
+}
+#familycont{
+  width: 270px
+
+}
+#eleven{
+  width: 270px
+}
+
+}
+#bottom{
+  background-color: yellow;
+
+}
+
+.logos{
+  position: relative;
+  top: 5px;
+}
+#mean{
+  width: 35px;
+  margin: 4px;
+}
+#php{
+  width:35px;
+  margin: 4px;
+}
+#codeig{
+  width: 35px;
+  margin: 4px;
+}
+#JQ{
+  width: 35px;
+  margin: 4px;
+}
+#ajax{
+  width: 35px;
+  margin: 4px;
+}
+#mysql{
+  width: 35px;
+  margin: 4px;
+}
+
+#html{
+  width: 35px;
+  margin: 4px;
+}
+
+#CSS{
+  width: 35px;
+  margin: 4px;
+}
+#bs{
+  width: 35px;
+  margin: 4px;
+}
+#JS{
+  width: 35px;
+  margin: 4px;
+}
+#MG{
+  width: 35px;
+  margin: 4px;
+}
+#EX{
+  width: 35px;
+  margin: 4px;
+}
+#ang{
+  width: 35px;
+  margin: 4px;
+}
+#nodejs{
+  width: 35px;
+  margin: 4px;
+}
+#html{
+  width: 35px;
+  margin: 4px;
+}
+#CSS{
+  width: 35px;
+  margin: 4px;
+}
+
+#socket{
+  width: 35px;
+  margin: 4px;
+}
+#python{
+  width: 35px;
+  margin: 4px;
+}
+#dj{
+  width: 35px;
+  margin: 4px;
+}
+#sql{
+  width: 35px;
+  margin: 4px;
+}
+#d3{
+  width: 35px;
+  margin: 4px;
+}
+#mat{
+  width: 35px;
+  margin: 4px;
+
+  }
+
+  #git{
+    width: 15px;
+    margin: 4px;
+
+    }
+
+    #linkedin{
+      width: 15px;
+      margin: 4px;
+
+      }
+      #twitter{
+        width: 15px;
+        margin: 4px;
+
+        }
+        #codep{
+          width: 15px;
+          margin: 4px;
+
+          }
+          .button {
+              background-color: #003300;
+              border: none;
+              color: white;
+              padding: 6px 9px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-flex;
+              font-size: 12px;
+              margin-left: 85px;
+              cursor: pointer;
+              align-items: center;
+              border: 2px solid;
+              border-radius: 25px;
+              position: relative;
+              top: 5px;
+}
+
+
+
+
+#bottom{
+    background-color: white;
+    width: 1050px;
+    text-align: center;
+
+
+}
+
+#topbottom{ display: block; vertical-align: top;
+  text-align: center;
+
+
+}
+#lowerbottom{
+  display: inline-block; vertical-align: top;
+  text-align: center;
+
+}

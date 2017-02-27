@@ -1,0 +1,187 @@
+* {
+  margin: 0px;
+  outline: 1px dotted red;
+  padding: 0px;
+}
+
+#wrapper{
+  width: 1000px;
+  height: 1000px;
+  margin: 0px auto;
+  background-color: rgb(36, 81, 118);
+  font-family: sans-serif;
+}
+#text{
+  color: white;
+}
+#test{
+  height: 70px;
+}
+
+form{
+
+  background-color: rgb(68, 68, 68);
+    height: 30px;
+    width: 240px;
+    text-align:right;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    }
+#search{
+    width: 130px;
+    type: text;
+  }
+
+#header{
+
+}
+#headerright{
+
+  height: 100px;
+  width: 300px;
+  display: inline-block;
+  margin-left: 400px;
+}
+#logo{
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+  width: 100px;
+
+}
+#text{
+
+  vertical-align: top;
+}
+#Search{
+
+vertical-align: top;
+width: 100px;
+position: relative;
+top: 15px;
+}
+
+button {
+    background: rgb(36, 81, 118);
+    height: 30px;
+    width: 40px;
+
+    border-radius: 5px;
+    margin-left: 2px;
+    color: white;
+}
+
+}
+.button{
+  background-color: blue;
+}
+#menubar{
+  background: rgb(72, 127, 172);
+  padding: 8px 0px;
+  text-align: center;
+  width: 850px;
+  position: relative;
+  left: 80px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  padding-left: 10px;
+  }
+
+
+
+.menubutton{
+      color: black;
+      text-decoration: none;
+      font-size: 19px;
+      margin-right: 35px;
+  }
+  #list {
+    display: inline-block;
+    text-decoration: underline;
+    color: white;
+    font-size: 18px;
+    vertical-align: top;
+    position: relative;
+    left: 25px;
+    top:50px;
+    margin: 15
+
+}
+#inforight{
+  display: inline-block;
+  width: 600px;
+  padding: 20px;
+
+}
+#maininfo {
+  display: inline-block;
+  width: 580px;
+  vertical-align: top;
+  color: white;
+  margin-left: 100px;
+  font-size: 16px;
+  text-align: center;
+}
+#quotes{
+  display: inline-block;
+  text-align: center;
+  width: 570px;
+  vertical-align: top;
+  color: yellow;
+  margin-left: 200px;
+  font-size: 18px;
+  margin-left: 120px;
+  padding: 15px;
+  line-height: 150%;
+
+}
+
+
+#quotes p span {
+    position: relative;
+    top: 8px;
+    color: white;
+}
+
+#bottommain{background-color: white
+
+}
+#gettingstarted{
+  display: inline-block;
+  border-top: solid rgb(143, 185, 222) 3px;
+  text-align: center;
+  width: 350px;
+  height: 300px;
+  margin-left:100px;
+  padding: 20px;
+
+}
+#gettingstarted span {
+    color: rgb(143, 185, 222);
+    font-size: 16px;
+}
+#applications{
+display: inline-block;
+text-align: center;
+border-top: solid rgb(143, 185, 240) 3px;
+width: 350px;
+height: 300px;
+padding: 10px;
+margin: 20px;
+padding: 20px;
+
+}
+#applications span {
+    color: rgb(143, 185, 222);
+
+    font-size: 16px;
+}
+
+#finalcontent{
+  text-align: center;
+ background-color: rgb(36, 81, 118);
+
+  padding-top: 35px;
+
+}
