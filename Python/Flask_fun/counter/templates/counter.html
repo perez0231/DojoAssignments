@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>COUNTER APP</title>
+  </head>
+  <body>
+    <div class="main">
+    <h1>Counter</h1>
+    <h3> Current Count: {{session['counter']}}</h3>
+      <form action="/count" method ="POST"> <input type="submit" value="GO!"> </form>
+      <form action="/reset" method ="POST"> <input type="submit" value="reset"> </form>
+    </div>
+    </form>
+  </body>
+</html>

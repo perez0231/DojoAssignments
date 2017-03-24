@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>YOU WIN!</title>
+        <meta charset="UTF-8">
+        <link rel='stylesheet' href="{{ url_for('static', filename='style3.css')}}">
+    </head>
+    <body>
+        <div class="main">
+            <h1>You Won!</h1>
+            <form action="/win" method="POST">
+                <input type="submit" values="Play Again!">
+            </form>
+        </div>
+    </body>
+</html>

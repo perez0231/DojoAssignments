@@ -1,0 +1,18 @@
+REGISTRATION</title>
+  </head>
+  <body>
+    <form  action="process" method="post">
+      <h1>Submit your email</h1>
+      <h2>{{false}}</h2>
+    Email:  <input type="text" name="email" placeholder="Enter Email">
+    <br>
+
+    <h2></h2>
+    <input type="submit"  value="Submit">
+    {% csrf_token %}
+
+
+    </form>
+
+  </body>
+</html>

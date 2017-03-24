@@ -1,0 +1,12 @@
+*{
+
+    margin: 0px, auto;
+     padding: 0px;
+     font-family: sans-serif;
+     font: arial;
+     outline: 1px dashed red;
+  }
+h1{
+  align-self: center;
+  margin-left: 400px;
+}

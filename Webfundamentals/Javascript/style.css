@@ -1,0 +1,42 @@
+*{
+  margin: 0px, auto;
+  padding: 0px;
+  font-family: sans-serif;
+  font: arial;
+
+}
+#wrapper{
+  background-color: #233c63;
+
+
+}
+
+
+.header{
+  background-color: #6397e8;
+  text-align: center;
+  padding: 20px;
+  border: solid 2px black;
+
+
+
+}
+
+.onebutton{}
+
+
+button {
+    background-color: #6397e8; /* Green */
+    border: solid 2px black;
+    color: green;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+.newclass{
+
+  background-color: green;
+  color: white;
+}

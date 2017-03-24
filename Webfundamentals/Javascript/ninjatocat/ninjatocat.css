@@ -1,0 +1,29 @@
+
+
+
+*{
+background-color: grey;
+
+
+}
+
+
+#puzzle{
+
+  vertical-align: top;
+}
+
+
+h1:hover{
+cursor: pointer;
+color: white;
+background-color: black;
+border: 2px solid white;
+
+}
+
+img{
+
+  display: block;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit friend</title>
+  </head>
+  <body>
+
+{% for users in users%}
+  {{users['first_name']}}
+  {{users['last_name']}}
+  {{users['email']}}
+{{%endfor%}}
+
+
+
+
+  </body>
+</html>

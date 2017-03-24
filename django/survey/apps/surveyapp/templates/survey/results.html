@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Results </title>
+  </head>
+  <body>
+    <p>Thanks for submitting this, you are the {{request.session.counter}} registered user</p>
+    <h1>Submitted Info:</h1>
+    <p>Name: {{request.session.data.name}}</p>
+    <p>Dojo Location: {{request.session.data.location}}</p>
+    <p>Favorite Language:{{request.session.data.language}}</p>
+    <p>Comment:{{request.session.data.comment}}</p>
+
+  </body>
+</html>

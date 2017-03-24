@@ -1,0 +1,21 @@
+
+
+
+*{
+background-color: grey;
+
+
+}
+
+
+#puzzle{
+
+  vertical-align: top;
+}
+
+
+img{
+
+  display: block;
+  margin-bottom: 10px;
+}

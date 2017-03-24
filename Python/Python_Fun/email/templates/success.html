@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Success </title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			{% with messages = get_flashed_messages() %}
+    			{% if messages %}
+     				{% for message in messages %}
+        				<div class="valid">
+        				<p>{{message }}</p>
+        				</div>
+      				{% endfor %}
+    			{% endif %}
+  			{% endwith %}
+			<h3>Email Address Entered</h3>
+			<div class="history">
+				{% for emailinfo in all_emailinfo: %}
+      				<p>{{ emailinfo['email']}} {{emailinfo['created_at'] }}</p>
+     	 		{% endfor %}
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

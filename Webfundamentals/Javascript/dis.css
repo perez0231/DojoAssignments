@@ -1,0 +1,28 @@
+*{
+margin: 0px,auto;
+padding: 0px;
+}
+
+
+
+.wrapper{
+
+  width: 1000px;
+  background-color: grey;
+  margin: 0 auto;
+
+}
+
+
+.main{
+text-align: center;
+
+
+}
+button:hover{
+cursor: pointer;
+color: white;
+background-color: black;
+border: 2px solid white;
+
+}

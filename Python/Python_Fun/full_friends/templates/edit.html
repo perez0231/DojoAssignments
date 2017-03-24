@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit friend</title>
+  </head>
+  <body>
+<h3>Current User info</h3>
+
+  {{users[0]['first_name']}}
+  {{users[0]['last_name']}}
+  {{users[0]['email']}}
+
+<form action="/friends/{{users[0]['id']}}", method= "Post">
+  <input type="text" name="first_name" placeholder="{{users[0]['first_name']}}" value="{{users[0]['first_name']}}">
+
+  <input type="text" name="last_name" placeholder="{{users[0]['last_name']}}" value="{{users[0]['last_name']}}">
+
+  <input type="text" name="email" placeholder="{{users[0]['email']}}" value="{{users[0]['email']}}">
+  <input type="submit" value="go">
+</form>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+*{
+  margin: 0px, auto;
+   padding: 0px;
+   font-family: sans-serif;
+   font: arial;
+   outline: 1px dashed red;
+}
+
+
+.wrapper{
+margin: 0px, auto;
+align-items: center;
+width: 1000px;
+height: 1000px;
+
+}
+
+#description{
+
+  height: 100px;
+  width: 150px;
+}
+
+.description{
+
+}
+
+#formbox{
+height: 200px;
+width: 200px;
+padding: 10px;
+line-height: 150%
+}
+
+.appendinfo{
+  color: white;
+height: 200px;
+  vertical-align: top;
+}
+
+.left{
+
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  align-items: left;
+}
+
+.right{
+
+  width: 400px;
+  display: inline-block;
+  background-color: red;
+  vertical-align: top;
+  height: 1000px;
+}
+.texts{
+  display: block;
+outline: 2px}

@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Form Test Index</title>
+</head>
+
+<body>
+    <h1>Index Page</h1>
+    <h3>Create a User</h3>
+    <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+    <form action='/users' method='post'>
+      Name: <input type='text' name='name'>
+      Coding Dojo Location: <select name="favlocation">
+          <option value="DC">DC</option>
+          <option value="SF Bay">SF Bay</option>
+          <option value="Washington">Washington</option>
+          <option value="Seattle">Seattle</option>
+      </select>
+
+      Favorite Language: <select name="language">
+          <option value="JS">JS</option>
+          <option value="Python">Python</option>
+          <option value="Ruby">Ruby</option>
+          <option value="MEAN">MEAN</option>
+      </select><br>
+
+      Comment:<br />
+  <textarea name='comment' id='comment'></textarea><br />
+
+
+        <input type='submit' value='create user'>
+    </form>
+</body>
+
+</html>

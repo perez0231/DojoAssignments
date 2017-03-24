@@ -1,0 +1,27 @@
+*{
+margin: 0px;
+padding: 0px;
+outline: dotted 1px red;
+
+}
+
+#wrapper{
+  margin: 0 auto;
+  width: 1000px;
+  text-align: center;
+
+}
+img{
+width: 200px;
+
+}
+
+.house{
+
+
+}
+
+.details{
+
+  width: 500px;
+}

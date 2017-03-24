@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Friends</title>
+</head>
+<body>
+
+  <h1>These are all my friends!</h1>
+
+
+  {% for users in users: %}
+     <p>First Name: {{ users['first_name'] }}</p>
+     <p>Last Name: {{ users['last_name'] }}</p>
+     <p>email: {{ users['email'] }}</p>
+     <a href="/friends/{{users['id']}}/edit"> <button type="button" name="edit">EDIT  </button></a>
+
+     <form  action="/friends/{{users['id']}}/delete" method="post">
+        <input type="submit" value="delete">
+     </form>
+  {% endfor %}
+
+  <h2>Add a Friend</h2>
+  <form action="/friends" methods="Post">
+    <p>FN: <input type="text" name="first_name" value=""></p>
+    <p>LN: <input type="text" name="last_name" value=""></p>
+    <p>Email: <input type="text" name="email" value=""></p>
+    <p> <input type="submit" value="GO"></p>
+  </form>
+
+  <!-- <form action=""/friends" method="POST">
+    <p> <
+    <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+    <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+    <label for="occupation">email:<input type="text" name="email" id="occupation"></label>
+    <input type="submit" value="GO">
+  </form> -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Success Page</title>
+  </head>
+  <body>
+<h1>hello, user</h1>
+<p> the email you entered {{flash.email}}</p>
+
+
+{%for email in emails%}
+  <p>{{email.email}} {{email.created_at}}</p>
+
+  {%endfor%}
+  </body>
+</html>

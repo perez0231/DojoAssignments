@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Validation</title>
+  <meta charset="UTF-8">
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="main">
+
+      <h1>Registration Form</h1>
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+    
+
+      <form action='/process' method='POST'>
+        Email<input type="email" name="email"><br />
+        First Name: <input type="text" name="first_name"><br />
+        Last Name: <input type="text" name="last_name"><br />
+        Password: <input type="password" name="password"><br />
+        Confirm Password: <input type="password" name="confirm_pwd"><br />
+
+        <input class="btn" type="submit" value="Submit">
+
+      </form>
+
+    </div>
+  </div>
+</body>
+</html>
