@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add a Book</title>
+  </head>
+  <body>
+    <p>Add a New Book Title and a Review:</p>
+    <form action="{%url 'beltApp:add' %}" method="post">
+      {% csrf_token %}
+      <h3>Book Title: <input type="text" name="title" ></h3>
+      <h3>Author:</h3>
+    <select class="authors" name="selectAuthor">
+    <option value="">author</option>
+    {%for author in authors%}
+    <option value="{{author.name}}">{{author.name}}</option>
+    {%endfor%}
+    </select>
+    <br>
+    <br>
+
+
+
+    
+    Or Add a new author: <input type="text" name="author_input" value="">
+    <h3>Review:</h3>
+<textarea name="review" rows="8" cols="80"></textarea>
+<br>
+
+
+<select name="rating">
+<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+</select>
+<br>
+<br>
+<input type="submit" name="" value="Add Book and Review!">
+
+</form>
+
+  </body>
+
+</html>

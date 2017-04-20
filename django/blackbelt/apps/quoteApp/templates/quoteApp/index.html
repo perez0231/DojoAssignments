@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+  </head>
+  <body>
+<a href="{%url 'login:logout'%}">logout</a>
+
+    <p>Hey my Ninja! Welcome, {{user.fname}} {{user.lname}}!</p>
+
+<div class="body">
+  <div class="Quotes">
+    <h1>Quoteable Quotes:</h1>
+
+        {% for item in quotes%}
+
+        <br>
+    <form  action= "{%url 'quoteApp:makefav' item.id %}" method="post">
+      {% csrf_token %}
+        {{item.author}}: {{item.content}}
+  <input type="submit" value="Add to favs">
+
+
+
+      <br>
+      </form>
+  <p>posted by <a href="{%url 'quoteApp:user' item.id %}">{{item.user.fname}}</a> </p>
+        {%endfor%}
+
+  </div>
+
+
+
+
+
+
+</div>
+
+
+<div class="YOUR FAV">
+  <h1>Your Favorites</h1>
+
+
+  {%for item in favs%}
+<form  action="{%url 'quoteApp:remove' item.id %}" method="post">
+  {% csrf_token %}
+  {{item.quote.author}}
+  {{item.quote.content}}
+  {{item.created_at}}
+  <p>Posted by <a href="{%url 'quoteApp:user' item.user.id %}">{{item.user.fname}}</a> </p>
+  <input type="submit" value="Remove from my List">
+</form>
+{%endfor%}
+</div>
+
+
+{% if messages %}
+{% for message in messages %}
+<p>{{message}}</p>
+{%endfor%}
+{% endif %}
+
+
+
+
+
+
+<div class="addquote">
+
+<h1>Add Quote</h1>
+  <form action="{%url 'quoteApp:addquote' %}" method="post">
+ {% csrf_token %}
+
+    Quoted by:<input type="text" name="quoted" Placeholder="Quoted by...">
+    <br>
+    <br>
+    Quote:<textarea name="quote" rows="8" cols="80"></textarea>
+    <input type="submit" name="" value="Add your Quote!">
+    </form>
+
+  </form>
+
+</div>
+</p>
+  </body>
+</html>

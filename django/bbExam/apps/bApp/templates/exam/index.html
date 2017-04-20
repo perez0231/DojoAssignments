@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>blackbeltExam</title>
+  </head>
+  <body>
+    <p>Hello, {{user.name}} !</p>
+  <table>
+      <tr>
+          <th>Firstname</th>
+          <th>Action</th>
+      </tr>
+
+      {%for item in users%}
+      <tr>
+        <th>{{item.name}}</th>
+        <th><a href="#">Add</a> <a href="#">Remove</a></th>
+      </tr>
+      {%endfor%}
+
+
+  </table>
+
+  </body>
+</html>

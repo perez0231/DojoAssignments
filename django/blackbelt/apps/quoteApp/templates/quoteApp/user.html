@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Page</title>
+  </head>
+  <body>
+
+    <a href="{%url 'login:logout'%}">logout</a>| <a href="{%url 'quoteApp:dashboard'%}">Dashboard</a>
+
+    <p>Hey pimp!</p>
+
+    <p>Hey my Ninja! Welcome, {{user.fname}} {{user.lname}}!</p>
+
+
+    <p>
+      <br>
+    <ol>{%for item in quotes%}
+      <li>{{item.author}}:
+      {{item.content}}</li>
+      {%endfor%}
+    </ol>
+    {% for item in count%}
+    <p> Count: {{item.poop}}</p>
+    {%endfor%}
+    <br>
+</p>
+
+
+
+  </body>
+</html>

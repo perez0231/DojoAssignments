@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Names</title>
+  </head>
+  <body>
+
+    <h2>The username you entered {{flash.username}} is valid! Thank you.</h2>
+
+    <p>Usernames entered:</p>
+    {%for item in usernames%}
+    <p>{{item.username}} {{item.created_at}} </p>
+
+    {%endfor%}
+
+  </body>
+</html>

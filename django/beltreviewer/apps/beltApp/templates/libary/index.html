@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Books Home</title>
+  </head>
+  <body>
+
+<a href="{%url 'login:logout'%}">logout</a>
+<p>Success! Welcome, {{user.fname}} {{user.lname}}!</p>
+<a href="{%url 'beltApp:bookreview'%}">Add Book and Review</a> |
+
+
+<h1>Recent Book Reviews:</h1>
+{% for item in review%}
+
+<a href="{% url 'beltApp:bookpage' item.book.id %}" >{{item.book.title}}</a><br>
+   <p>Rating: {{item.rating}}</p>
+   <p>
+       <a href=>{{item.user.fname}}</a>
+       says: <i>"{{item.content}}"</i>
+   </p>
+   <p>{{item.authors.name}}</p>
+   <p><i>Posted on {{item.created_at}}</i></p>
+   <hr>
+
+
+
+{%endfor%}
+
+
+
+<h2>Other Book Reviews:</h2>
+
+{% for item in other_review%}
+
+<a href=>{{item.book.title}}</a><br>
+
+
+
+
+{%endfor%}
+
+
+
+  </body>
+</html>

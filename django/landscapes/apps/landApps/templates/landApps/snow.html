@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Snow</title>
+  </head>
+  <body>
+    {%if id < 10%}
+    {% load staticfiles %}
+    <img src="{%static 'landApps/Snow-Landscape.jpg'%}">
+    {%endif%}
+
+    {%if id > 10 and id < 20 %}
+    {% load staticfiles %}
+    <img src="{%static 'landApps/buntcake.jpg'%}">
+    {%endif%}
+
+    {%if id > 20 and id < 30 %}
+    {% load staticfiles %}
+    <img src="{%static 'landApps/forest.jpg'%}">
+    {%endif%}
+
+    {%if id > 30 and id < 40 %}
+    {% load staticfiles %}
+    <img src="{%static 'landApps/vineyard.jpg'%}">
+    {%endif%}
+
+    {%if id > 40 and id < 50 %}
+    {% load staticfiles %}
+    <img src="{%static 'landApps/foxy.jpg'%}">
+    {%endif%}
+    {%if id > 50%}
+    <p>Number too HIGH</p>
+    {% endif %}
+  </body>
+</html>

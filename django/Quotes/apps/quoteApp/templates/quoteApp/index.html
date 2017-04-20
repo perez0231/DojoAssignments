@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+  </head>
+  <body>
+    <p>Hey my Ninja! Welcome, {{user.fname}} {{user.lname}}!</p>
+<div class="Quotes">
+  <p>Quoteable Quotes:</p>
+  {% for item in Quotes%}
+  {{item.author}}: {{item.content}}
+
+<p>posted by <a href="#">item.user.fname</a> </p>
+
+
+{%endfor%}
+
+</div>
+<div class="favs">
+  <p>Your Favorites</p>
+</div>
+<div class="addquote">
+  <form action="{%url 'quoteApp:addquote' %}" method="post">
+ {% csrf_token %}
+    Quoted by:<input type="text" name="quoted" Placeholder="Quoted by...">
+    Quote:<input type="text" name="quote">
+    <input type="submit" name="" value="submit">
+    </form>
+
+  </form>
+
+</div>
+</p>
+  </body>
+</html>

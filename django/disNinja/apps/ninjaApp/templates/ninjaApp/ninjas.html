@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninjas</title>
+  </head>
+  <body>
+    <p>Here</p>
+    {%if display == True %}
+      {% load staticfiles %}
+      <img src="{%static 'images/tmnt.png'%}">
+    {% endif %}
+
+    {% if display == False %}
+
+        {% if color == 'blue'%}
+          <img src="{%static 'images/leonardo.jpg'%}">
+
+        {% elif color == 'red'%}
+          <img src="{%static 'images/raphael.jpg'%}">
+        {% elif color == 'orange'%}
+          <img src="{%static 'images/michelangelo.jpg'%}">
+        {% elif color == 'purple'%}
+          <img src="{%static 'images/donatello.jpg'%}">
+        {% else %}
+
+          <img src="{%static 'images/notapril.jpg'%}">
+        {% endif %}
+
+    {% endif %}
+
+  </body>
+</html>

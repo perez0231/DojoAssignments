@@ -15,7 +15,7 @@ def process(request):
         'flash': results[1],
         'emails': Email.objects.all()
         }
-        return render(request, 'success.html', context)
+        return render(request, 'logApp/success.html', context)
 
 
     else:

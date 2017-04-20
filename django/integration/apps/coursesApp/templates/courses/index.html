@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Courses</title>
+  </head>
+  <body>
+    <h1>Hey Ninja</h1>
+    <p>Add a New Course</p>
+    <form action="addcourse" method="post">
+      Name:<input type="text" name="name">
+      <br>
+      {% csrf_token %}
+
+      Description: <input type="TextField" name="description">
+      <br>
+      <input type="submit" name="" value="Add">
+
+
+      <h1>Courses</h1>
+      <table>
+        <tr>
+          <th>Course Name</th>
+          <th>Description</th>
+          <th>Date Added</th>
+          <th>Actions</th>
+        </tr>
+
+        {% for item in course_data%}
+          <tr>
+              <td>{{item.name}}</td>
+              <td>{{item.description}}</td>
+              <td>{{item.created_at}}</td>
+              <td><a href="{%url "courses:remove" item.id %}">Remove</a></td>
+
+            </tr>
+            {% endfor%}
+
+  </form>
+
+
+
+
+      </table>
+
+
+      <form action="choose" method="post">
+        {% csrf_token %}
+        <input type="submit" name="add" value="Go to Courses">
+    </form>
+  </body>
+</html>

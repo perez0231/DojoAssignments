@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Your Friends Page</title>
+  </head>
+  <body>
+    <a href="{% url 'login:logout' %}">Log Out</a>
+
+        <p>Hello, {{user.name}}!</p>
+        <p>Here are your friends:</p>
+
+
+  <table>
+
+    <tr>
+      <th>Alias</th>
+      <th>Action</th>
+    </tr>
+
+      {%for item in friendships%}
+
+    <tr>
+      <th>{{item.Friend2.name}}</th>
+      <th><a href="#">View Profile</a> <a href="#">Remove</a> </th>
+      <th>{{item.Friend2.id}}</th>
+    </tr>
+      {%endfor%}
+  </table>
+
+
+
+
+
+      <p>Other users not in your list:</p>
+      <table>
+          <tr>
+              <th>Alias</th>
+              <th>Action</th>
+          </tr>
+
+          {%for item in users%}
+          {%if item.friend1 != session.user_id %}
+          <tr>
+            <th>{{item.name}}</th>
+            <th><form action="{% url 'makeupApp:add' id=item.id %}" method="post">
+              {% csrf_token %}
+              <input type="submit" name="add">
+
+            </th>
+            <th>{{item.id}}</th>
+
+          </tr>
+        </form>
+
+
+
+
+      {% csrf_token %}
+
+          </tr>
+          {%endif%}
+          {%endfor%}
+
+        </tbody>
+      </table>
+
+
+
+
+
+  </body>
+</html>
