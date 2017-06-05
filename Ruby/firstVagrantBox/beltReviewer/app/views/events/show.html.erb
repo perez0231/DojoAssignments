@@ -1,0 +1,52 @@
+<div>
+  <a href="/events/index">Home</a>
+
+
+<h2>Event: <%=@Event.name%></h2>
+<h3>Host: <%=@Event.user.fname%> <%=@Event.user.lname%></h3>
+<h4>Date: <%=@Event.date.strftime("%B %d, %Y")%></h4>
+<h3>Location: <%=@Event.city%>, <%=@Event.state%></h3>
+<h5>Number of People attending: <%=@participants.count%></h5>
+</div>
+<div class="" style=" height:400px; overflow: scroll;">
+  <table class="highlight" style=" height:200px; overflow: scroll;">
+    <tr >
+      <td ><strong>Name </strong></td>
+      <td ><strong>Location </strong></td>
+      <td ><strong>State </strong></td>
+    </tr>
+    <% @participants.each do |participants| %>
+    <tr >
+      <td ><p><%=participants.user.fname%> <%=participants.user.lname%></p></td>
+      <td><%=participants.user.city%></td>
+      <td><%=participants.user.state%></td>
+    </tr>
+    <%end %>
+  </table>
+</div>
+
+
+
+<div style=" height: 200px; overflow: scroll;">
+<h3>Comments</h3>
+<% @comments.each do |comment| %>
+<p><%=comment.user.fname%> <%=comment.user.lname%> says: <%= comment.content%> </p>
+<hr>
+<%end%>
+</div>
+
+
+
+<div class="row">
+  <form class="col s12" action="/events/<%=@Event.id%>/comments" method = "post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="textarea1" name= "content" class="materialize-textarea"></textarea>
+        <label for="textarea1">Textarea</label>
+        <button class="btn waves-effect waves-light teal" type="submit">Submit Comments!</button>
+      </div>
+    </div>
+  </form>
+</div>

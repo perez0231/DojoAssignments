@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User info</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>User Name</td>
+        <td>Action</td>
+      </tr>
+      {% for item in Users%}
+      <tr>
+        <td>{{item.name}}</td>
+        <td><a href="{%url 'int:int' id=item.id%}">View</a></td>
+      </tr>
+        {%endfor%}
+    </table>
+  </body>
+</html>

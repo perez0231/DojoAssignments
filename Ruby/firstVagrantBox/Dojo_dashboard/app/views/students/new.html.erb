@@ -1,0 +1,24 @@
+<h1>Students#new</h1>
+<h1>Add a new student!</h1>
+
+<form class="" action="/dojos/<%= @dojo.id %>/students" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <p>first_name: <input type="text" name="fname" value=""></p>
+  <p>Last name :<input type="text" name="lname" value=""></p>
+  <p> email: <input type="text" name="email" value=""></p>
+
+
+  <select name="dojo">
+      <%@dojos.each do |item| %>
+
+    <option value="<%=item.id%>"><%=item.branch%></option>
+      <%end%>
+  </select>
+  <p>in this file</p>
+
+  <input type="submit" name="" value="Create!">
+<p><a href="/">Return Home</a></p>
+
+
+
+</form>

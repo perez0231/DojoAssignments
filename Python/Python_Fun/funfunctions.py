@@ -13,6 +13,6 @@ def multiply(x, y): #function with parameter input and multilier
     arr= []
     for item in x:
         arr.append(item*y)
-        print arr
+    print arr
 
 multiply([2,4,6,8,10], 5)

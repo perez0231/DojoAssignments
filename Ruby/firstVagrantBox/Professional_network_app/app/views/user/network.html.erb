@@ -1,0 +1,68 @@
+<head>
+
+</head>
+
+<h2><%=@user.name%>
+  Network Page!</h2>
+  <hr>
+
+
+
+
+
+<div class="row">
+  <div class="input-field col s6">
+    <textarea name="name" class="materialize-textarea" style="padding:10px; background-color:white; border-style: solid;"><%=@user.description%>
+    </textarea>
+  </div>
+</div>
+<br>
+<a href=""></a>
+
+
+<h3>Your Professional Network:</h3><hr>
+
+<div class="" style="padding-left:10px; height:300px; width:500px; overflow:scroll; background-color:white; border-style:solid ">
+
+
+  <% @network.each do |network| %>
+  <%if network.user.id !=@user%>
+  <td>
+    <p>
+      <a href="/user/<%=network.user.id%>/show "><%=network.user.name%></a>
+    </p>
+  </td>
+  <%end%>
+  <%end%>
+
+</div>
+
+<div class="invites">
+  <h3>Inviations:</h3>
+  <p >The following people asked you to be in their network!</p>
+  <table>
+    <tr>
+      <td>Name</td>
+      <td>Actions:</td>
+    </tr>
+    <% @invitations.each do |invitation| %>
+    <tr>
+
+      <td>
+        <p>
+          <a href="/user/<%=invitation.inviter.id%>/show "><%=invitation.inviter.name%></a>
+        </p>
+      </td>
+      <td>
+        <a href="/networks/<%=invitation.inviter.id%>">Accept!</a>
+      </td>
+      <td>
+        <a href="/invitations/<%=invitation.inviter.id%>" data-method="delete">Ignore</a>
+      </td>
+    </tr>
+
+    <%end%>
+
+  </table>
+
+</div>

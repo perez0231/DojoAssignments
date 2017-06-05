@@ -1,0 +1,45 @@
+<h1>NinjaGold#index</h1>
+<p>Find me in app/views/ninja_gold/index.html.erb</p>
+<p>Your gold: <%=session[:count] %></p>
+  <form class="" action="/create" method="post">
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <input type="hidden" name="building" value="farm">
+    <h3>Farm</h3>
+    <p>(earns 10-20 gold)</p>
+    <button type="submit" name="button">Find gold</button>
+
+  </form>
+
+    <form class="" action="/create" method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <input type="hidden" name="building" value="cave">
+      <h3>Cave</h3>
+      <p>(earns 5-10 gold)</p>
+      <button type="submit" name="button">Find gold</button>
+
+    </form>
+    <form class="" action="/create" method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <input type="hidden" name="building" value="house">
+      <h3>House</h3>
+      <p>(earns 2-5 gold)</p>
+      <button type="submit" name="button">Find gold</button>
+
+    </form>
+
+    <form class="" action="/create" method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <input type="hidden" name="building" value="casino">
+      <h3>Casino</h3>
+      <p>(earn/lose up to 50 gold)</p>
+      <button type="submit" name="button">Find gold</button>
+
+    </form>
+     <p>Activities</p>
+     <% @activities.reverse.each do |element| %>
+     <p><% if element.include?("earned")%></p>
+     <p class="earned"><%= element %></p>​
+     <%else%>
+     <p class="lost"><%= element %></p>​
+     <% end %>​
+			<% end %>​

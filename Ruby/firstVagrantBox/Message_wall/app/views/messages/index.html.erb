@@ -1,0 +1,38 @@
+<p>Social Media Blog</p>
+<a href="users/logout">Logout!</a>
+<h1>Hello <%=@user.username%></h1>
+<%if flash[:errors]%>
+  <%flash[:errors].each do |item|%>
+    <p><%=item%></p>
+  <%end %>
+<%end %>
+<h1>Login</h1>
+
+<h3>Post a Message!</h3>
+<form action="/messages" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="textarea" style="width: 500px;
+  height: 100px;" name="content" placeholder="Place your messages here..">
+  <br>
+  <input type="submit" name="" value="Submit!">
+
+  <%@messages.each do |message| %>
+  <h4 style=""><%=message.content%>- <%=message.user.username%></h4>
+  <div style="margin-left:75px;">
+
+<p>Comments:</p>
+      <%@comments.each do |comment| %>
+      <% if message.id == comment.message.id %>
+        <p><%=comment.content%>- <%=comment.user.username%> - <%=comment.created_at.strftime("%B %d, %Y")%></p>
+        <%end%>
+        <%end%>
+
+  <form action="/comment/<%=message.id%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="text" name="content">
+    <input type="submit" name="" value="submit">
+
+  </form>
+    </div>
+
+  <%end%>

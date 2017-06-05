@@ -1,0 +1,9 @@
+ <p>Expand your network and your career!</p>
+
+ <% @user.each do |user| %>
+ <% if user.id != current_user.id%>
+ <p><a href="user/<%= user.id%> "><%= user.name%></a>
+   </p>
+
+ <%end%>
+<%end%>

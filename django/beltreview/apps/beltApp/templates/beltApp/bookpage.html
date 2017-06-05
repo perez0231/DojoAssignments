@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Book Page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+    <div style="display: inline-block;vertical-align: top;" class="left">
+
+    <p>Dojo Assignment: Blackbelt Reviews</p>
+    Links:<a href="{%url 'beltApp:bookreview'%}">Add Book and Review</a>|
+    <a href="{%url 'beltApp:logout'%}">Log out</a>
+    <br>
+    <h2>{{book.title}}</h2>
+    <p>Author: {{author.name}}</p>
+
+    <h3>Reviews:</h3>
+    {%for item in reviews%}
+    <hr>
+        <p> <a href="{%url 'beltApp:user' item.user.id%}"> {{item.user.fname}} </a> says: {{item.content}}</p>
+        <p>Rating: {{item.rating}}</p>
+        <p>Posted on: {{item.created_at}}</p>
+        {% if request.user == reviews.user %}
+            <p><a href="{%url 'beltApp:delete'%}">Delete</a></p>
+        {% endif %}
+    {% endfor%}
+  </div>
+
+
+  <div style="display: inline-block; vertical-align: top; margin-left:300px" class="right">
+
+ <form action="{%url 'beltApp:bookpage' book.id%}" method="post">
+    {% csrf_token %}
+
+
+        </select>
+
+
+      <h3>Add a Review</h3>
+      <textarea name="review" rows="8" cols="80"></textarea>
+      <br><br>
+
+      <select name="rating">
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+      </select>
+      <input type="submit" name="" value="Submit Review">
+
+    </form>
+  </div>
+
+</div>
+  </body>
+</html>

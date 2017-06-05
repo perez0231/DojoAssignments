@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Interests</title>
+  </head>
+  <body>
+    <h2>Hello, {{interests.first.user.name}} </h2>
+
+    {%for item in interests%}
+
+
+    {%endfor%}
+
+    {%for item in interests%}
+    <p>{{item.interest.interest}}</p>
+    {%endfor%}
+    <a href="{% url 'int:index'%}">enter another user interest</a>
+    <a href="{% url 'int:users'%}">back to users</a>
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Reviews</title>
+  </head>
+  <body>
+    Links:<a href="{%url 'beltApp:bookreview'%}">Add Book and Review</a>|
+    <a href="{%url 'beltApp:logout'%}">Log out</a>
+    <p>Dojo Assignment: Blackbelt Reviews</p>
+    <br>
+    {%for item in user%}
+    <h2>User:{{item.fname}} {{item.lname}}</h2>
+
+
+    <h3>Email: {{item.email}}</h3>
+
+    {%endfor%}
+    {%for item in count%}
+
+    <h3>Total Reviews: {{item.num_reviews}}</h3>
+    {%endfor%}
+    <h2>Posted Reviews on the following books:</h2>
+    {%for item in users_reviews%}
+      <p><h3><a href="{%url 'beltApp:bookpage' item.books.id%}">{{item.books.title}}</a></h3></p>
+    {%endfor%}
+
+
+
+
+
+
+  </body>
+</html>

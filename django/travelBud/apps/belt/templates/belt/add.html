@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add a Trip</title>
+  </head>
+  <body>
+
+{%if messages%}
+{%for item in messages%}
+{{messages}}
+{%endfor%}
+{%endif%}
+
+<h2>Add a Quote</h2>
+<form action="{%url 'belt:addinfo'%}" method="post">
+  {% csrf_token %}
+  <p>Destination: <input type="text" name="destination" value=""></p>
+  <p>Description:<input type="text" name="description" value=""></p>
+  <p>Start Date:<input type="date" name="start" value=""></p>
+  <p>End Date:<input type="date" name="end" value=""></p>
+  <input type="submit" name="" value="Submit!">
+
+</form>
+
+  </body>
+</html>

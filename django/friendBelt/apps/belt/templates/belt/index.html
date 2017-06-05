@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hella</title>
+  </head>
+  <body>
+    <a href="{%url 'belt:logout'%}">Log out</a>
+
+    <h2>{{user.fname}} {{user.lname}}</h2>
+
+    <h4>Here are a list of friends:</h4>
+    <table>
+      <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Action</strong></td>
+      </tr>
+      {%for friend in already_friends%}
+      <tr>
+        <td><p>{{friend.fname}}</p></td>
+        <td><a href="">Action1</a> <a href="#">Action2</a></td>
+      </tr>
+      {%endfor%}
+
+      </table>
+
+      <h4>Other users that you may want to Add...</h4>
+
+      <table>
+        <tr>
+          <td><strong>Name</strong></td>
+          <td><strong>Action</strong></td>
+        </tr>
+        {%for user in not_friends_yet%}
+        <tr>
+                    <td>{{user.fname}}</td>
+          <td><form action="{%url 'belt:addfriend' user.id%}" method="post">
+            {% csrf_token %}
+            <input type="submit" name="addfriend" value="Add Friend!">
+          </form>           </td>
+        </tr>
+
+
+
+
+    {%endfor%}
+
+
+
+
+</html>

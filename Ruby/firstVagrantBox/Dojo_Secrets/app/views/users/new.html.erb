@@ -1,0 +1,29 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+<h2>Registration</h2>
+<form  action="/users/create" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    name: <input type="text" name="name" placeholder="name">
+    Email: <input type="text" name="email" placeholder="email">
+    <br>
+    Password:<input type="password" name="password" placeholder="password">
+    <br>
+    Password:<input type="password" name="password_confirmation" placeholder="password">
+    <br>
+    <input type="submit" name="" value="Register User!">
+
+</form>
+
+
+
+
+<h1>Log in</h1>
+<form class="" action="/sessions/new" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  Email: <input type="text" name="email" placeholder="email">
+  <br>
+  Password:<input type="password" name="password" placeholder="password">
+  <br>
+  <input type="submit" name="" value="Log In">
+
+</form>

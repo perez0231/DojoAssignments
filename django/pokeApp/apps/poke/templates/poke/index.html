@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blackbeltexam</title>
+  </head>
+  <body>
+    <a href="{%url 'belt:logout'%}">Log out</a>
+
+
+<h2>Welcome {{user.fname}} {{user.lname}}!</h2>
+<h4>{{mypokes}} people poked you!</h4>
+
+
+
+
+{% for item in userpokes %}
+{{item}}
+  {%for user in allusers%}
+    {%if item.action_user == user.id%}
+        <p>{{user.fname}} poked you {{item.action_user__count}} times.</p>
+{%endif%}
+{%endfor%}
+
+
+
+{%endfor%}
+
+
+
+
+
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Poke History</th>
+    <th>Action</th>
+  </tr>
+  {%for item in users%}
+  <tr>
+    <td>{{item.fname}}</td>
+    <td>{{item.lname}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.num_count}}</td>
+    <td><form  action="{%url 'poke:addpoke' item.id%}" method="post">
+      {% csrf_token %}
+      <input type="submit" name="poke" value="Poke">
+    </form></a></td>
+
+  </tr>
+
+  {%endfor%}
+</table>
+
+</table>
+  </body>
+</html>

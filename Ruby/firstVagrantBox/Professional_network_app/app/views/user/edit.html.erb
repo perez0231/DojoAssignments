@@ -1,0 +1,26 @@
+<header>
+  <nav>
+     <div  class="nav-wrapper teal lighten-2; col s12" style="padding-left:20px;">
+       <a href="#" class="brand-logo">Logo</a>
+       <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li><a href="/user/all">Expand your Network!</a></li>
+         <li><a href="/user/<%=@user.id%>/edit">Edit Profile</a></li>
+         <li><a href="/users/logout"data-method="delete">Logout</a></li>
+       </ul>
+     </div>
+   </nav>
+</header>
+
+<main>
+  <h2><%= @user.name %> Edit Page!</h2>
+
+
+  <form class="" action="/user/<%= @user.id %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="patch">
+    Name: <input type="text" name="name" value="<%=@user.name%>">
+    <br>
+      <input type="submit" name="" value="Update User!">
+
+  </form>
+</main>

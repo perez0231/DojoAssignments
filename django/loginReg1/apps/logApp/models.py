@@ -48,7 +48,7 @@ class UserManager(models.Manager):
             errs.append('Invalid email')
             return (False, errs)
 
-        if luser[0].password != data['password']:            #checking password
+        if bcrypt.hashpw(password.encode(), user.password.encode()) == user.password:            #checking password
             flag = False
             errs.append('invalid password')
             return (False, errs)

@@ -19,11 +19,10 @@ class UserManager(models.Manager):
             flag= False
             errs.append("Passwords do not Match")
 
-
-
-        if flag: # if true, this data is returned to the DB, returns user object
-
-            user= User.objects.create(fname= data['fname'],lname=data['lname'], email= data['email'], password= data['password'])
+        if flag:
+            passverification = data['password']
+            hashed = bcrypt.hashpw(str(passverification), bcrypt.gensalt())
+            user= User.objects.create(fname= data['fname'],lname=data['lname'], email= data['email'], password= hashed)
 
             return (True, user)
         else: ### else if not true return False spit out errs report
@@ -33,17 +32,20 @@ class UserManager(models.Manager):
         flag = True
         errs = []
         luser = User.objects.filter(email= data['email'])
+        encoded =data['password'].encode()
+        print encoded
         if not luser:       #if no email matach will create a QUERY SET, but if returning useer will
             flag= False
             errs.append('Invalid email')
             return (False, errs)
-
-        if luser[0].password != data['password']:            #checking password
-            flag = False
-            errs.append('invalid password')
-            return (False, errs)
         else:
-            return (True, luser[0])
+            if bcrypt.hashpw(encoded, luser[0].password.encode())== luser[0].password:
+                flag=True         #checking password
+                return (True, luser[0])   #[0]
+
+            else:
+                errs.append('invalid password')
+                return (False, errs)
 
 
 

@@ -1,0 +1,29 @@
+<p>Expand your network and your career prospects!</p>
+
+<a href="/user/network">Home</a>
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Action</td>
+  </tr>
+
+
+
+  <% @user.each do |user| %>
+      <% if user.id != current_user.id %>
+        <% if current_user.friends.exists?(user.id) || user.friend_requests.exists?(current_user)%>
+        <%else%>
+                <tr>
+                  <td><p><a href="/user/<%= user.id%>/show "><%= user.name%></a></p></td>
+                  <td><a href="/invitations/<%= user.id%>/create" data-method="post">Connect!</a></td>
+                </tr>
+       <%end%>
+     <%end%>
+  <%end%>
+
+
+
+
+
+</table>

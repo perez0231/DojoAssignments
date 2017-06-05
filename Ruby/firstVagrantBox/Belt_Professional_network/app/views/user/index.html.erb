@@ -1,0 +1,40 @@
+<h1> Welcome to LinkedOut!</h1>
+<h4>Login or register a new account below </h4>
+
+<div class="wrapper">
+
+<div class="registration " style="display:inline-block; vertical-align: top; padding:10px; width: 500px;">
+  <h2>Registration</h2>
+  <form  action="/user" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      Name: <input type="text" name="name" placeholder="Last Name"><br>
+      Email: <input type="text" name="email" placeholder="email"> <br>
+      Password:<input type="password" name="password" placeholder="password">
+      <br>
+      Confirm Password:<input type="password" name="password_confirmation" placeholder="password">
+      <br>
+      <textarea name="description" rows="8" cols="80" placeholder="input your professional overview"></textarea>
+      <button class="btn waves-effect waves-light teal" type="submit">Register User!</button>
+  </form>
+</div>
+
+
+
+
+<div class="login" style=" margin-left: 60px; display:inline-block; vertical-align: top; width: 300px;">
+
+  <h1>Log in</h1>
+  <form class="" action="/user/new" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    Email: <input type="text" name="email" placeholder="email">
+    <br>
+    Password:<input type="password" name="password" placeholder="password">
+    <br>
+    <input type="submit" name="" value="Log In">
+
+  </form>
+
+</div>
+
+
+</div>

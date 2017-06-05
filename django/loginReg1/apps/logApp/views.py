@@ -42,23 +42,10 @@ def login(request):
 
     if results[0]:
         request.session['user_id']= results[1].id
-        print "9"*100
         return render(request, 'logApp/success.html', context)
     else:
         for err in results[1]:
             messages.error(request, err)
         return redirect ("/")
-    email = request.POST['email']
-    password = request.POST['password']
 
-    if User.objects.filter(email=email):
-        user = User.objects.get(email=email)
-        if bcrypt.hashpw(password.encode(), user.password.encode()) == user.password:
-            print "here"
-            return (True, user.id)
-        else:
-            return (False, "Invalid password111")
-    else:
-            return (False, "Invalid email address")
-    #
     #         return redirect("/")

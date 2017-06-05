@@ -46,17 +46,3 @@ def login(request):
         for err in results[1]:
             messages.error(request, err)
         return redirect ("/")
-
-    email = request.POST['email']
-    password = request.POST['password']
-
-    if User.objects.filter(email=email):
-        user = User.objects.get(email=email)
-        if bcrypt.hashpw(password.encode(), user.password.encode()) == user.password:
-            return (True, user.id)
-        else:
-            return (False, "Invalid password")
-    else:
-            return (False, "Invalid email address")
-
-            return redirect("/")

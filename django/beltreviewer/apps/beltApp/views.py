@@ -10,7 +10,7 @@ def index(request):
 
     context= {
     "user": userinsession,
-    "review": Review.objects.all().order_by('-created_at')[:3],
+    "review": Review.objects.all()
     "other_review": Review.objects.all().order_by('-created_at')[3:]
     }
 

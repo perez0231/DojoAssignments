@@ -5,8 +5,6 @@ from ..lrApp.models import User
 
 
 
-
-
 # Create your models here.
 
 
@@ -16,5 +14,3 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     like = models.ManyToManyField(User, related_name='likes')
-
-    objects = PostManager()

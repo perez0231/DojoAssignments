@@ -1,0 +1,31 @@
+* {
+	outline: 1px dashed blue;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.location{
+  display: inline-block;
+  width: 250px;
+  padding: 40px;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+
+
+
+.recap {
+	width: 1000px;
+	height: 200px;
+	border: 4px solid black;
+	overflow: scroll;
+  margin-left: 80px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+.para{
+  margin-left: 80px;
+  font-size: 20px;
+}

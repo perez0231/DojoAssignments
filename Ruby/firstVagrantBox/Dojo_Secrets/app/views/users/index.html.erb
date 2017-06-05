@@ -1,0 +1,47 @@
+<div class="wrapper" width= 1000px>
+<br>
+  <a href="/secrets">Home</a> |  <a href="/users/<%=@user.id%>/edit">Edit your information</a>
+  <h2>Hello, <%=@user.name%></h2>
+  <h4>Add a Comment</h4>
+  <form class="" action="/secrets/create" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <textarea style="width:300px; height:100px;  vertical-align:top;" name="content" placeholder="Post a comment.."></textarea>
+    <br>
+    <br>
+    <input type="submit" name="" value="Add Secret!">
+  </form>
+<div class="left" style="display: inline-block; width: 400px;" >
+
+  <h3>Your Secrets:</h3>
+
+  <% @secrets.each do |item| %>
+  <p style="margin-left: 20px; font-size: 18px;"><%=item.content%></p>
+  <p style="margin-left: 40px;font-size: 13px;"><%=item.likes.count%> Likes</p>
+
+
+  <% if current_user == item.user%>
+  <form style="margin-left: 40px;" class="" action="/secrets/<%=item.id%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" name="" value="Delete!">
+
+  </form>
+  <%end%>
+
+  <%end%>
+</div>
+
+<div class="right" style="display:inline-block; vertical-align: top; width: 300px;">
+  <h3>Secrets Liked:</h3>
+  <% @secret.each do |secret| %>
+      <% secret.likes.each do |like| %>
+        <%if like.user_id ==@user.id%>
+          <p style="margin-left: 20px;font-size: 18px;"><%=secret.content%></p>
+          <p style="margin-left: 40px; font-size: 13px;"><%=secret.likes.count%> Likes</p>
+        <%end%>
+      <%end%>
+  <%end%>
+</div>
+
+
+</div>

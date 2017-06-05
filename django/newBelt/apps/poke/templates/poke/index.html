@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Pokes</title>
+  </head>
+  <body>
+    <a href="{%url 'poke:logout'%}">Log out</a>
+
+<h2>Welcome, {{user.fname}} {{user.lname}}</h2>
+<h4>{{numberofpokes}} people poked you! ;)</h4>
+<p>{{userinputs}}</p>
+<p>{{data.userinputs}}</p>
+{%for item in mypokelist%}
+
+  {%for user in allusers%}
+
+              {% if item.poker == user.id%}
+                  <p>Hey, {{user.fname}} {{user.lname}} poked you {{item.poker__count}} times! Its getting hot in here.</p>
+              {%endif%}
+
+  {%endfor%}
+{%endfor%}
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email Address</th>
+    <th>Poke History</th>
+    <th>Action</th>
+  </tr>
+
+  {%for item in users%}
+  <tr>
+    <td>{{item.fname}} </td>
+    <td> {{item.lname}}</td>
+    <td> {{item.email}}</td>
+    <td> {{item.num_count}}</td>
+    <td><form  action="{%url 'poke:addpoke' item.id%}" method="post">
+      {% csrf_token %}
+      <input type="submit" name="poke" value="Poke">
+
+    </form>          </td>
+
+  </tr>
+{%endfor%}
+
+
+</table>
+
+
+
+
+
+</body>
+</html>

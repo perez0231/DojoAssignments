@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Trip Details</title>
+  </head>
+  <body>
+<a href="{%url 'belt:logout'%}">Log out</a>| <a href="{%url 'belt:my_index'%}">Home</a>
+
+
+{{trip.}}
+
+<h2>{{trip.destination}}</h2>
+<p>Planned By:{{trip.traveler.fname}}
+{{trip.traveler.lname}}</p>
+<p>Description: {{trip.plan}} </p>
+<p>Travel From: {{trip.startdate}}</p>
+<p>Travel to: {{trip.enddate}}</p>
+
+
+<h5>Travelers:</h5>
+{%for item in currTrip%}
+<p>{{item.users.fname}}
+{{item.users.lname}}</p>
+
+
+
+
+{%endfor%}
+
+  </body>
+</html>

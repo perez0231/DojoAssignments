@@ -1,0 +1,23 @@
+<h1>Coding Dojo Locations</h1>
+
+<table>
+<tr>
+    <td>Coding Dojo Branch</td>
+    <td>Street</td>
+    <td>City</td>
+    <td>State</td>
+    <td>User Actions:</td>
+  </tr>
+<%@dojos.each do |item| %>
+<tr>
+  <td><%=item.branch%></td>
+  <td><%=item.street%></td>
+  <td><%=item.city%></td>
+  <td><%=item.state%></td>
+  <td><a href="/dojos/<%=item.id%>/students">Show Item</a></td>
+  <td><a href="/dojos/<%=item.id%>" data-method="delete">Delete Item</a></td>
+</tr>
+<% end%>
+</table>
+
+<a href="dojos/new">Add a New Location!</a>

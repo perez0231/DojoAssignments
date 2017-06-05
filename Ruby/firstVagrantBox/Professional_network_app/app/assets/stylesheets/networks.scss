@@ -1,0 +1,15 @@
+// Place all the styles related to the Networks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    font-size:18px;
+    color: black;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+  main {
+    flex: 1 0 auto;
+  }

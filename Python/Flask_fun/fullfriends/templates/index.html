@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>full friends</title>
+  </head>
+  <body>
+    <h1>Friends:</h1>
+    <table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Friend Since</th>
+  </tr>
+    {%for user in users%}
+  <tr>
+    <td>{{user['first_name']}}</td>
+    <td>{{user['last_name']}}</td>
+    <td>{{user['created_at']}}</td>
+  </tr>
+  {%endfor%}
+
+</table>
+
+
+<h1>Add a Friend:</h1>
+<form  action="/add" method="post">
+  <input type="text" name="first_name">
+  <input type="text" name="last_name">
+  <input type="submit" value="Submit">
+
+</form>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<h1>Students#edit</h1>
+<p>Find me in app/views/students/edit.html.erb</p>
+<form class="" action="/dojos/<%= @dojo.id %>/students/<%= @student.id%>" method="post">
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <input type="hidden" name="_method" value="patch">
+    <p>first_name:
+        <input type="text" name="first_name" value="<%= @student.first_name %>'"></p>
+    <p>Last name :<input type="text" name="last_name" value="<%= @student.last_name %>'"></p>
+    <p>
+        email:
+        <input type="text" name="email" value="<%= @student.email %>'"></p>
+
+    <select name="dojo">
+        <%@dojos.each do |item| %>
+        <%if item.id == @student.dojo_id %>
+        <option selected value="<%=item.id%>"><%=item.branch%></option>
+        <%else%>
+        <option value="<%=item.id%>"><%=item.branch%></option>
+        <%end%>
+      <%end%>
+
+    </select>
+
+    <input type="submit" name="" value="Update!">
+
+</form>

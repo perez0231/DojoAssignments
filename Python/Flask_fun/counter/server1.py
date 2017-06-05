@@ -5,20 +5,18 @@ app.secret_key = 'mysecretkey'
 
 @app.route('/')
 def index():
-        return render_template("index.html")
+    return render_template("index.html")
 
 
 @app.route('/users', methods =['POST'])
 def users():
-
-
-if len(request.form['first'])
-    return redirect('/')
+    if len(request.form['first']):
+        return redirect('/')
 
     else:
-    flash("success")
+        flash("success")
 
 
 
-return render_template("userform.html", name = name, favlocation = favlocation, comment= comment)
+        return render_template("userform.html", name = name, favlocation = favlocation, comment= comment)
 app.run(debug=True)

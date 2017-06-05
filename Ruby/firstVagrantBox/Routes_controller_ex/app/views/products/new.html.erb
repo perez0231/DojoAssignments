@@ -1,0 +1,12 @@
+
+
+<p>Add a Product</p>
+<form action="/products" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    Name: <br>
+    <input type="text" name="name">
+    <br>
+    Description: <br> <textarea name='description'></textarea>
+    <br>
+    <input type='submit' value='Create'>
+</form>
