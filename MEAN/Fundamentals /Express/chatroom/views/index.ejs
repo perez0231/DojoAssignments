@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  var socket =io.connect();
+  var userName = prompt("userName?")
+  console.log(userName);
+  socket.emit("Users_name_joined", {"name": userName})
+  socket.on("Users_name_joined", function(data){ console.log(data)
+    for(var i = 0; i <data.all_users.length; i++){
+      $('#users').append(`<p>${data.all_users[i]}</p>`)
+      console.log(data)
+    }
+
+  })
+  $("#submit_button").click(function(){
+    var message = $('#chatInput').val();
+    socket.emit('send_message', {"message": message, sender: socket.id})
+  })
+  socket.on("send_message", function(data){
+    $("#chatbox").append(`<p>${data.message} ${data.sender} </p>`)
+  })
+  socket.on("user_left", function(data){
+    $('#users').html("")
+    for(var i = 0; i < data.users.length; i++){
+        $('#users').append(`<p> ${data.users[i]}<p>`)
+      console.log(data)
+    }
+
+  })
+});
+
+
+
+</script>
+
+
+
+
+    <meta charset="utf-8">
+    <title>groupchat</title>
+  </head>
+  <body>
+<h1>ChatRoom</h1>
+<div id="chatbox"
+     class=""> </div>
+     <input type="text" name="chatInput" id="chatInput" placeholder="Enter message">
+     <button id="submit_button" name="button">Send</button>
+    <div id="users" class=""></div>
+<style type="text/css">
+#chatbox{
+  width:75%;
+  overflow-y: scroll;
+  height: 450px;
+  border: 2px solid black;
+  margin:auto;
+
+}
+#users{
+  width:75%;
+  overflow-y: scroll;
+  height: 150px;
+  border: 2px solid black;
+  margin:auto;
+
+}
+#chatInput{
+  width:75%;
+  margin:auto;
+  display:block;
+}
+#submit_button{
+margin: auto;
+display: block;
+}
+
+</style>
+
+
+  </body>
+</html>

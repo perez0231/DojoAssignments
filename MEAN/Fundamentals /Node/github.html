@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $.get("https://api.github.com/users/daniel", displayName)
+
+      function displayName(data) {
+        console.log(data);
+        $("button").click(function(){
+          $(".info").append(`<a href= 'https://api.github.com/users/daniel'>${data.name}</a>`)
+        })
+      }
+
+    });
+
+    </script>
+    <title>GitHub</title>
+  </head>
+  <body>
+
+    <button type="button" name="button">User Name</button>
+    <p class= "info"></p>
+
+
+
+  </body>
+</html>

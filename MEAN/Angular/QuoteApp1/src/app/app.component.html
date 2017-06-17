@@ -1,0 +1,26 @@
+<!--The whole content below can be removed with the new code.-->
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+  <h2>Add a Quote</h2>
+
+
+<form (submit)="onSubmit()">
+  <textarea required
+  minlength= "3"
+  [(ngModel)]= "quote.quote"
+  #myquote='ngModel'
+  name="quote" rows="8" cols="80"></textarea> <br>
+
+
+<input required minlength= "2" [(ngModel)]= "quote.author" #QuoteAuthor='ngModel'  type="text" name="author" value="">
+
+
+<input type="submit" name="submit" value="Add Quote">
+</form>
+<div class="red" *ngIf="!myquote.valid"> <p>Appropriate quote is needed.</p> </div>
+
+<div class="red" *ngIf="!QuoteAuthor.valid"> <p>Author is needed.</p> </div>
+{{quotes | json}}
+<app-header></app-header>
+<app-main [quotes]="quotes"></app-main>

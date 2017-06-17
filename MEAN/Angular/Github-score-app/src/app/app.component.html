@@ -1,0 +1,21 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+
+
+<h3>GitHub Calculator</h3>
+<p>Enter Your Username below:</p>
+
+
+<form (submit) ="onSubmit(username)">
+
+GitHub Username:<input type="text" name="username" required [(ngModel)]="username.username" #username= 'ngModel'><br> <br>
+<input type="submit" name="" value="Calculate my GitHub Score">
+
+</form>
+<h1 *ngIf="score"> Your Score is: {{score}}</h1>
+
+
+</div>

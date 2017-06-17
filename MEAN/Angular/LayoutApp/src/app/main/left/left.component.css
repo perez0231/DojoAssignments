@@ -1,0 +1,11 @@
+p{
+  width:200px;
+  height: 600px;
+  margin: 30px;
+
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: skyBlue;
+
+}

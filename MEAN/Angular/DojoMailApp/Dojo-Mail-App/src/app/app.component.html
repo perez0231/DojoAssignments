@@ -1,0 +1,21 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+</div>
+<table>
+<tr>
+  <td>Email</td>
+  <td>Importance </td>
+  <td>Subject </td>
+  <td> Content</td>
+</tr>
+<tr *ngFor='let email of emails'>
+  <td>{{ email.email }}</td>
+  <td *ngIf="email.importance">high</td>
+  <td *ngIf="!email.importance">low</td>
+  <td>{{ email.subject }}</td>
+  <td>{{ email.content }}</td>
+</tr>
+</table>

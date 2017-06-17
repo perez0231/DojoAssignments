@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Animal</title>
+  </head>
+  <body>
+    <form class="" action="/animals/<%=animal[0].id %>" method="post"> <br>
+      <input type="text" name="name" value="<%= animal[0].name %>"> <br>
+      <input type="text" name="height" value="<%= animal[0].height %>"> <br>
+      <input type="text" name="attack" value="<%= animal[0].attack %>"> <br>
+      <input type="text" name="special_ability" value="<%= animal[0].special_ability %>"> <br>
+<input type="submit" name="" value="Update">
+    </form>
+    <form class="" action="/animals/destroy/<%=animal[0].id %>" method="post">
+      <input type="submit" name="" value="Delete this Animal">
+
+    </form>
+
+
+
+
+
+
+  </body>
+</html>

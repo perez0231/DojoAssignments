@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animals on Mongoose</title>
+  </head>
+  <body>
+    <table>
+
+      <tr>
+        <td><strong>Name</strong></td> <td><strong>height</strong></td> <td><strong>attack</strong></td> <td><strong>special_ability</strong></td> <td><strong>Action</strong></td>
+      </tr>
+<% for(i in animals){ %>
+
+<tr>
+<td><p><%= animals[i].name%></p></td>
+<td><p><%= animals[i].height%></p></td>
+<td><p><%= animals[i].attack%></p></td>
+<td><p><%= animals[i].special_ability%></p></td>
+<td> <a href="/animals/<%= animals[i].id%>">Show Animal</a></td>
+</tr>
+<% } %>
+
+</table>
+<a href="/animals/new">Add an animal to the Pack!</a>
+
+  </body>
+</html>

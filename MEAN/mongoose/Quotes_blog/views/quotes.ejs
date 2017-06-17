@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All these quotes</title>
+  </head>
+  <body>
+    <h1>Quotes of the Dojo</h1>
+
+
+    <% for (i in quote) { %>
+            <p><%= quote[i].quote %></p>
+            <p>-
+                <%= quote[i].name %>
+                <%= quote[i].createdAt %>
+            </p>
+            <hr/>
+        <% } %>
+
+  </body>
+</html>

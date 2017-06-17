@@ -1,0 +1,14 @@
+<h3>Quotes List</h3>
+<fieldset > <legend>Quotes</legend>
+
+
+<div *ngFor= "let quote of quotes, let i = index ">{{quote.quote}} -{{quote.author}} Likes: {{quote.likes}}
+<button (click)="Like(quote)" type="button" name="Like">Like</button>
+<button (click)="unlike(quote)" type="button" name="Delete">Unlike</button>
+<button (click)="delete(i)"type="button" name="button">Delete</button>
+
+
+</div>
+
+
+</fieldset>

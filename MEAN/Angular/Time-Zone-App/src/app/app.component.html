@@ -1,0 +1,21 @@
+<!--The whole content below can be removed with the new code.-->
+
+<style media="screen">
+.button:active, .button:focus {
+  background: yellow;
+}
+</style>
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+  <button class ="button" (click)= 'showPST()'> PST </button>
+
+
+  <button class="button" type="button" name="button">MST</button>
+  <button class="button" type="button" name="button">CST</button>
+  <button class="button" type="button" name="button">EST</button>
+  <button class="button" type="button" name="button">CLEAR</button>
+
+<p>{{timearea[0]}}:{{time| date: 'MMM d, y H:mm:ss' : '+0300' }}</p>
+</div>

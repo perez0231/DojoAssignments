@@ -1,0 +1,39 @@
+<div class="top">
+  <fieldset class="box" display="inline-block"> <legend>Human</legend>
+    <p *ngIf="PowerExp">Power:   {{PowerExp}}</p>
+    <h2 *ngIf="PowerExp > 9000 && PowerExp  < 20000 ">Over 9000!</h2>
+
+    <h2 *ngIf="PowerExp > 20000 && PowerExp  < 50000 ">Superlative</h2>
+
+
+    <h2 *ngIf="PowerExp >= 50000">THE ONE!</h2>
+
+
+
+  </fieldset>
+  <fieldset class="box" display="inline-block"> <legend>Saiyan</legend>
+    <p *ngIf="PowerExp"> Power: {{PowerExp * 10}}</p>
+
+    <script type="text/javascript">
+      console.log(PowerExp)
+    </script>
+    <h2 *ngIf="PowerExp*10 > 9000 && PowerExp *10 < 20000 ">Over 9000!</h2>
+
+    <h2 *ngIf="PowerExp*10 >= 20000 && PowerExp *10 < 50000 ">Superlative</h2>
+
+
+    <h2 *ngIf="PowerExp*10 >= 50000">THE ONE!</h2>
+  </fieldset>
+  <fieldset class="box" display="inline-block"> <legend>SupSayan</legend>
+        <p *ngIf="PowerExp">Power:   {{PowerExp * 90}} </p>
+        <h2 *ngIf="PowerExp*90 > 9000 && PowerExp *90 < 20000 ">Over 9000!</h2>
+
+        <h2 *ngIf="PowerExp*90 >= 20000 && PowerExp *90 < 50000 ">Superlative</h2>
+
+
+        <h2 *ngIf="PowerExp*90 >= 50000">THE ONE!</h2>
+
+  </fieldset>
+
+
+</div>
