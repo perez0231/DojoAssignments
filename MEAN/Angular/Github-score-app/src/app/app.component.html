@@ -17,5 +17,12 @@ GitHub Username:<input type="text" name="username" required [(ngModel)]="usernam
 </form>
 <h1 *ngIf="score"> Your Score is: {{score}}</h1>
 
+  <div *ngIf="score">
 
-</div>
+
+        <h2 style= "color:red" *ngIf="score < 20 ">You need some work!</h2>
+        <h2 *ngIf="score > 20 && score < 50 ">Good Start!</h2>
+
+        <h2 *ngIf="score > 100 && score < 200 ">Superlative</h2>
+
+  </div>
