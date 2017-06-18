@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
 import { HttpService } from './http.service';
 import { AppRoutingModule } from './app-routing.module';
-
+//components
 import { AppComponent } from './app.component';
 import { SeattleComponent } from './seattle/seattle.component';
 import { SanJoseComponent } from './san-jose/san-jose.component';
@@ -26,8 +26,6 @@ import { DCComponent } from './dc/dc.component';
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    AppRoutingModule
-
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

@@ -1,0 +1,22 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+  <a [routerLink]="['/']">Home Page</a> |
+  <a [routerLink]="['/products', 'list']">Products List</a> |
+<a [routerLink]="['/products', 'create']">Product Create</a>
+
+
+
+
+  <fieldset> <legend>Product Info</legend>
+
+<router-outlet></router-outlet>
+
+
+  </fieldset>
+
+
+</div>

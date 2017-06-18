@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpService } from './http.service';
-
 
 @Component({
   selector: 'app-root',
@@ -8,8 +6,5 @@ import { HttpService } from './http.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Dojo Weather';
-
-
-
-  }
+  title = 'Project Product Managment';
+}
