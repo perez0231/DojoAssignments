@@ -20,8 +20,6 @@ export class SanJoseComponent implements OnInit {
   constructor(private _httpService: HttpService){}
 
   ngOnInit() {
-
-
         this._httpService.getWeather(this.city)
         .then(weather =>{this.weather = weather
         console.log(this.weather)

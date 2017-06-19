@@ -6,11 +6,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductCreationComponent } from './product-creation/product-creation.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent},
   { path: 'products/list',  component: ProductListComponent},
-  { path: 'products/create', component: ProductCreationComponent}
+  { path: 'products/create', component: ProductCreationComponent},
+  { path: 'products/edit/:idx', component: ProductEditComponent}
 ];
 
 @NgModule({
