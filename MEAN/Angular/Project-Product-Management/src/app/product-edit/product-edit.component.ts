@@ -11,14 +11,15 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ProductEditComponent implements OnInit {
   products: Array<Product> = [];
   product = new Product();
+  index= 0
 
   constructor(private _productsService: ProductsService,
               private _router: Router,
               private _route: ActivatedRoute
             ) {
               this._route.params.subscribe(param =>{
-                this.product = this._productsService.getOneProduct(param.idx)
-                console.log(this.product)
+                this.index=(param.idx)
+                console.log(this.index)
               })
             }
 
@@ -32,4 +33,24 @@ export class ProductEditComponent implements OnInit {
   })
 
   }
+
+
+update(){
+  this._productsService.updateProducts(this.products);
+  this.product= new Product();
+  this._router.navigate(['/products/list'])
+}
+
+
+delete(index){
+  this.products.splice(index, 1);
+  this._router.navigate(['/products/list'])
+
+}
+
+
+
+
+
+
 }

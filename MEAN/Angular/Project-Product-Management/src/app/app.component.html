@@ -6,14 +6,15 @@
   </h1>
   <a [routerLink]="['/']">Home Page</a> |
   <a [routerLink]="['/products', 'list']">Products List</a> |
-<a [routerLink]="['/products', 'create']">Product Create</a>
+  <a [routerLink]="['/products', 'create']">Product Create</a>
 
 
 
 
-  <fieldset> <legend>Product Info</legend>
+  <fieldset>
+    <legend>Product Info</legend>
 
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 
 
   </fieldset>

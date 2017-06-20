@@ -1,7 +1,19 @@
 <h1>Edit </h1>
 
-<form>
-  <input type="text" name="title" value=[(ngModel)]="product.title">
 
+
+<form (submit)="update()">
+
+
+  Title:<input type="text" name="title" [(ngModel)]="products[index].title">
+  Price:<input type="text" name="price" [(ngModel)]="products[index].price">
+  Price:<input type="text" name="image" [(ngModel)]="products[index].image">
+  <input type="submit" name="" value="Update"><br>
 </form>
-{{product | json}}
+
+
+
+
+
+
+<button type="button" (click)="delete(index)" name="button"> Delete</button>

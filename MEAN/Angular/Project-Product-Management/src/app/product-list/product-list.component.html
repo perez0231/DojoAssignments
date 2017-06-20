@@ -9,7 +9,7 @@
     <p>{{i}}</p>
 
     <button class="edit" [routerLink]="['/products', 'edit', i ]">EDIT</button>
-    <button class="delete" (click)="deleteProduct(product)">DELETE</button>
+    <button class="delete" (click)="products.splice(i, 1)">DELETE</button>
 
   </div>
 

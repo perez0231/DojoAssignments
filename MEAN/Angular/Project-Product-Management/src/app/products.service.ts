@@ -5,21 +5,14 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable()
 export class ProductsService {
 
-
+//creating an observable object of BehaviorSubject
   productsObservable = new BehaviorSubject(null)
 
   constructor() { }
+  //creating blank array, Creating update products function with array as a param, telling obserable object to push changes to the products array
   products=[];
   updateProducts(products: Array<Product>){
     this.productsObservable.next(products);
   }
-
-  // create(newProduct){
-  //   this.products.push(newProduct)
-  // }
-
-  getOneProduct(idx){
-  return this.products[idx];
-}
 
 }

@@ -8,21 +8,21 @@ import { Product } from '../product';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products: Array<Product> =[]
+  products =[];
 
   constructor(private _productsService: ProductsService) { }
+
+
+
 
   ngOnInit() {
     this._productsService.productsObservable.subscribe((products) => {
       this.products = products;
     });
+
+
   }
-//
-// delete(product){
-//   const idx =this.products.indexOf(product)
-//   this.products.splice(idx, 1);
-//   this._productsService.updateProducts(this.products)
-// }
+
 
 
 }

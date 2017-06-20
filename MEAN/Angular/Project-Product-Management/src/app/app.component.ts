@@ -17,7 +17,7 @@ export class AppComponent {
   title = 'Project Product Managment';
   products= [ ]
 
-
+//please keep
  constructor(private _productsService: ProductsService){
     this._productsService.updateProducts(this.products);
     this._productsService.productsObservable.subscribe((products) => {
