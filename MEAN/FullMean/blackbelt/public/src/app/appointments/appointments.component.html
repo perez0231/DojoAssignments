@@ -1,0 +1,27 @@
+<h1>Doctor Marco's Appointments</h1>
+<p>Hello {{name}} {{id}}</p>
+
+<table>
+<tr>
+  <td>Date</td>
+  <td>Time</td>
+  <td>Patient Name</td>
+  <td>Compliant</td>
+</tr>
+
+
+<tr *ngFor = 'let appointment of appointments'>
+      <td>{{appointment.date | date}}</td>
+      <td>{{appointment.time}}</td>
+      <td>{{appointment.user}}</td>
+      <td>{{appointment.complaint}}</td>
+      <td *ngIf = 'appointment.user == name'> <a [routerLink]="['/delete', appointment._id]">Cancel</a>
+    </tr>
+
+</table>
+
+
+
+
+<a routerLink="/makeAppointment"><button class="btn btn-success pull-right" > Add</button></a>
+<button (click)='logOut()'>Log Out</button>

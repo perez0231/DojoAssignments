@@ -3,7 +3,8 @@ var Animal = mongoose.model('Animal');
 var animal = require('../controllers/animals.js');
 
 module.exports = function(app) {
-  app.get('/', function(req, res){
+  console.log('routes')
+  app.get('/animals', function(req, res){
     animal.home(req, res)
     })
 
@@ -26,7 +27,7 @@ module.exports = function(app) {
       animal.update(req, res);
   });
 
-    app.post('/animals/destroy/:id', function(req, res){
+    app.delete('/animals//:id', function(req, res){
       animal.delete(req, res)
     });
 

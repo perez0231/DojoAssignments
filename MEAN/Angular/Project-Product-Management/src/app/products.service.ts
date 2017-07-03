@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable()
 export class ProductsService {
 
-//creating an observable object of BehaviorSubject
+//creating an observable object of BehaviorSubject; observable of our products
   productsObservable = new BehaviorSubject(null)
 
   constructor() { }
@@ -14,5 +14,10 @@ export class ProductsService {
   updateProducts(products: Array<Product>){
     this.productsObservable.next(products);
   }
+getOneProduct(){
+  console.log(this.productsObservable.value)
+  console.log("minhwuzhere")
+  return this.productsObservable.value
 
+}
 }

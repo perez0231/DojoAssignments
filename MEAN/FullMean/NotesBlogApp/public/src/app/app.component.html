@@ -1,0 +1,17 @@
+<!--The whole content below can be removed with the new code.-->
+<h1>Notes Blog</h1>
+
+<form (submit)="create()">
+
+
+
+  Content:<input type="text" name="content" required [(ngModel)]="note.content">
+  <input type="submit" name="" value="Add Note">
+</form>
+
+
+
+<div *ngFor="let note of notes">
+  <p>{{note.content}} {{note.createdAt | date:"medium"}}</p>
+
+</div>

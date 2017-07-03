@@ -9,11 +9,13 @@ import { HttpService } from './http.service';
 
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BodyComponent
+    BodyComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

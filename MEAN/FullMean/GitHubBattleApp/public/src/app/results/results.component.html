@@ -1,0 +1,26 @@
+<h1>First Place</h1>
+
+<p *ngIf="users[0].score > users[1].score"> {{users[0].login}} {{users[0].score}}</p>
+<p *ngIf="users[1].score > users[0].score"> {{users[1].login}} {{users[1].score}}</p>
+
+
+<h1>Second Place</h1>
+<p *ngIf="users[0].score < users[1].score"> {{users[0].login}} {{users[0].score}}</p>
+<p *ngIf="users[1].score < users[0].score"> {{users[1].login}} {{users[1].score}}</p>
+
+
+
+<img src="{{user}}" alt="">
+
+
+
+
+
+{{users[0] | json}}
+
+{{users[1] | json}}
+
+
+
+
+<button [routerLink]="['/']" type="button" name="button">Reset!</button>

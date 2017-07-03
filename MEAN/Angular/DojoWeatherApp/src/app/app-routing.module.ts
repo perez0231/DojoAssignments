@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { SeattleComponent } from './seattle/seattle.component';
 import { SanJoseComponent } from './san-jose/san-jose.component';
 import { BurbankComponent } from './burbank/burbank.component';

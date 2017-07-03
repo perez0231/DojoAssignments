@@ -1,0 +1,49 @@
+<div class="container">
+
+
+
+  <fieldset>
+    <legend>Player 1</legend>
+    <h1>Player 1</h1>
+
+<form [hidden]="users[0]" (submit)="OnSubmit1()">
+  <input type="text" name="login" [(ngModel)]="user1.login" #login1= 'ngModel' >
+  <input type="submit" name="submit" value="Get User">
+</form>
+
+<div *ngIf="users[0]">
+  <img [src]="users[0].img" alt="">
+  {{users[0].login}}
+
+
+</div>
+
+
+  </fieldset>
+
+
+
+  <fieldset>
+    <h1>Player 2</h1>
+    <legend>Player 2</legend>
+    <form [hidden]="users[1]"  (submit)="OnSubmit2()">
+      <input type="text" name="login" [(ngModel)]="user2.login" #login2= 'ngModel'>
+      <input type="submit" name="" value="Get User">
+    </form>
+    <div *ngIf="users[1]">
+      <p>user2</p>
+      <img [src]="users[1].img" alt="">
+      {{users[1].login}}
+
+
+    </div>
+
+  </fieldset>
+
+  <div *ngIf="users[1]">
+    <button [routerLink]="['/results']" type="button" name="button">WELCOME TO THE THUNDERDOME!</button>
+  </div>
+
+
+
+</div>

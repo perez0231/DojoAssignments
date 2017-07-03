@@ -1,0 +1,13 @@
+*{
+  font-family: sans-serif;
+  text-align: center;
+}
+.container{
+  margin: auto;
+
+}
+fieldset{
+  width: 300px;
+  display: inline-block;
+
+}

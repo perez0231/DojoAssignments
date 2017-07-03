@@ -1,0 +1,14 @@
+<h1>Question: {{question.question}}</h1>
+<h2>{{question.description}}</h2>
+
+<br>
+
+<div *ngFor="let answer of question.answers">
+<p>{{answer.answer}}</p>
+<p>{{answer.details}}</p>
+<p>{{answer.user}}</p>
+
+<p>{{answer.likes}} <button (click)="likeanswer(answer._id)">Like</button> </p>
+
+
+</div>

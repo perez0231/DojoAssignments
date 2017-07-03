@@ -1,0 +1,23 @@
+<h1>New Appointment {{name}}</h1>
+
+<form (submit)="makeAppointment()" #myForm='ngForm'>
+  Date: <input name= "date"type="date"  [(ngModel)]="appointment.date" >
+
+			Time: <select name ="time" [(ngModel)]="appointment.time">
+				<option>8:00 am</option>
+				<option>9:00 am</option>
+				<option>10:00 am</option>
+				<option>11:00 am</option>
+				<option>12:00 pm</option>
+				<option>1:00 pm</option>
+				<option>2:00 pm</option>
+				<option>3:00 pm</option>
+				<option>4:00 pm</option>
+				<option>5:00 pm</option>
+			</select>
+
+
+  Complaint: <textarea name= "complaint" cols="40" rows="5" [(ngModel)]="appointment.complaint" placeholder="what is the issue"></textarea>
+  <input type="submit" name="" value="Make Appointment">
+
+</form>

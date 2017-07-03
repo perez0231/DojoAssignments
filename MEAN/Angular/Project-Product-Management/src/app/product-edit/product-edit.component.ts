@@ -19,7 +19,10 @@ export class ProductEditComponent implements OnInit {
             ) {
               this._route.params.subscribe(param =>{
                 this.index=(param.idx)
-                console.log(this.index)
+                this._productsService.getOneProduct()
+                console.log("minhstart")
+                console.log(this._productsService.getOneProduct())
+                console.log("minhend")
               })
             }
 
@@ -29,7 +32,6 @@ export class ProductEditComponent implements OnInit {
   ngOnInit() {
     this._productsService.productsObservable.subscribe( (products) => {
     this.products = products;
-    console.log(products);
   })
 
   }
@@ -47,6 +49,7 @@ delete(index){
   this._router.navigate(['/products/list'])
 
 }
+
 
 
 

@@ -1,0 +1,14 @@
+<p class="link"><a href="/login">If you are an existing client, please click here to log in.</a></p>
+
+<h1>Register for a new account!</h1>
+
+<form (submit)= "OnSubmit()">
+  <label for="first_name">first_name</label> <input type="text" name="first_name"[(ngModel)]="user.first_name"> <br>
+  <label for="last_name">last_name</label> <input type="text" name="last_name" [(ngModel)]="user.last_name"> <br>
+  <label for="email">email</label> <input type="text" name="email" [(ngModel)]="user.email"> <br>
+  <label for="password">password</label> <input type="password" name="password" [(ngModel)]="user.password">
+  <p>*should be longer than 8 characters</p>
+  <label for="cpassword">Confirm Password</label> <input type="password" name="cpassword" [(ngModel)]="cpassword"><br>
+  <label for="birthday">Date of Birth: <input type="date" name="birthday" [(ngModel)]="user.birthday"></label> <br>
+  <input type="submit" name="submit" value="Register User">
+</form>

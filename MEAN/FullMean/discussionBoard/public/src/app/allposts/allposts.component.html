@@ -1,0 +1,29 @@
+<h1>Hey {{name}}</h1>
+<a [routerLink]="['/questions']" >Add a Question</a>
+
+<div class="">
+
+<table>
+  <tr>
+    <td>Question</td>
+    <td>Answer</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor="let question of questions">
+    <td>{{question.question}}</td>
+    <td>{{question.answers.length}}</td>
+    <td> <a [routerLink]="['/questions', question._id]" >Show Question </a>
+      <a [routerLink]="['/answers', question._id]" >Answer</a>
+    </td>
+  </tr>
+
+
+
+
+
+</table>
+
+
+
+</div>
+<button (click)='logOut()'>Log Out</button>
